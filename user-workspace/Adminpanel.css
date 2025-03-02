@@ -1,0 +1,144 @@
+
+.sidebar {
+    background-color: #2C3E50;
+    min-height: 100vh;
+    color: white;
+    padding-top: 20px;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.sidebar .nav-link {
+    color: white;
+    padding: 12px 20px;
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    width: 100%;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #34495E;
+}
+
+.nav-link-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.sidebar .nav-link i:first-child {
+    width: 20px;
+    text-align: center;
+}
+
+.sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #34495E;
+}
+
+.sub-menu.show {
+    max-height: 200px;
+}
+
+.sub-menu .nav-link {
+    padding-left: 50px;
+    font-size: 0.9em;
+}
+
+.rotate-icon {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+}
+
+.rotate-icon.active {
+    transform: rotate(90deg);
+}
+
+.top-bar {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+.dashboard-card {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+.card-blue { background-color: #3498DB; }
+.card-red { background-color: #E74C3C; }
+.card-orange { background-color: #F39C12; }
+.card-green { background-color: #2ECC71; }
+
+.has-submenu {
+    cursor: pointer;
+}
+
+.menu-label {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.dashboard-card {
+    transition: transform 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card a:hover {
+    text-decoration: underline !important;
+}
+
+.list-group-item {
+    transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    border-bottom: 0;
+}
+
+@media print {
+    .sidebar, .top-bar {
+        display: none !important;
+    }
+    .col-md-9 {
+        margin-left: 0 !important;
+    }
+}
+
+.error-field {
+    border-color: #dc3545 !important;
+}
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
